@@ -1,0 +1,4 @@
+[submodule "repo"]
+	path = repo
+	url = https://github.com/OXY2DEV/tree-sitter-kitty.git
+	branch = main
