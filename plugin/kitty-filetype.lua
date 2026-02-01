@@ -39,8 +39,8 @@ vim.filetype.add(
         end
       end
     },
-    path = {
-      [".*/kitty/kitty%.conf$"] = "kitty"
+    filename = {
+      ["kitty.conf"] = "kitty"
     } 
   }
 )
