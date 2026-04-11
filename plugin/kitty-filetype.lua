@@ -10,7 +10,7 @@ if has_TS_parser then
 
   parser_config.kitty = {
     install_info = {
-      url = plugin_dir .. "/repo",
+      url = "https://github.com/OXY2DEV/tree-sitter-kitty",
       files = { "src/parser.c" },
       branch = "main"
     },
