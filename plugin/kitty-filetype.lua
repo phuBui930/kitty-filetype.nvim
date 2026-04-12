@@ -16,31 +16,3 @@ if has_TS_parser then
     },
   }
 end
-
-vim.filetype.add(
-  {
-    extension = {
-      conf = function (path, bufnr)
-        local function is_kitty_conf(bufnr, max)
-          bufnr = bufnr or 0
-          max = max or 20
-
-          local lines = vim.api.nvim_buf_get_lines(bufnr, 0, max, false)
-          for _, line in ipairs(lines) do
-            if line:match("%S") then
-              return line:match("^%s*#kitty%.conf%s*$") ~= nil
-            end
-          end
-
-          return false
-        end
-        if is_kitty_conf(bufnr) then
-          return "kitty"
-        end
-      end
-    },
-    filename = {
-      ["kitty.conf"] = "kitty"
-    } 
-  }
-)
